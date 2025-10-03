@@ -96,6 +96,140 @@
 #     return capitalize_list_items
 # print(capitalize_list_items('mango','banana','pepe','tite','sex','lube','condom'))
 
+# foods=['fried chicken','roast beef','beef wellington','steak']
+# def add_list(foods,*add_food):
+#   total_item = []
+#   for item in foods:
+#     total_item.append(item)
+#   for item in add_food:
+#       total_item.append(item)
+#   return total_item
+# print(add_list(foods,'caldereta','patatim','lechon kawali'))
+  
+
+# def add_listpt2(foods,*add_food):
+#    added_food= []
+#    for item in add_food:
+#       added_food.append(item)
+#       total_food = foods+list(add_food)
+#    return total_food  
+# print(add_listpt2(foods,'tinola','mechado','adobo'))
+
+
+# def remove_item(foods,*remove):
+#    remove_list=list(remove)
+
+#    for item in remove_list:
+#       if item in foods:
+#          foods.remove(item)
+#       return(foods)
+# print(remove_item(foods,'steak','roast beef'))
+
+# def sum_of_numbers(number):
+#    sum = 0
+#    for i in range (number+1):
+#        sum += i
+#    return sum
+# print(sum_of_numbers(10))
+
+# def sum_of_odds(number):
+#    odds_sum = 0 
+#    for i in range(number+1):
+#       if i %2 != 0:
+#          odds_sum += i
+#    return odds_sum
+
+# print(sum_of_odds(69))
+   
+# def sum_of_even(number):
+#    even_sum = 0 
+#    for i in range(number+1):
+#       if i %2 == 0:
+#          even_sum += i
+#    return even_sum
+
+# print(sum_of_even(69))
+
+# def even_and_odds(positive):
+#   for i in range(positive+1):
+#     if i % 2 == 0:
+#       print (f'{i} is a even number')
+#     else:
+#       print(f'{i} is a odd number')
+# print(even_and_odds(1000))
+
+# def factorial(whole):
+#   if not isinstance(whole,int) or whole <0:
+#     return 'only fucking whole numbers bitch'
+#   for i in range (1,whole +1):
+#     whole *= i
+#   return (whole)
+
+# print(factorial(10))
+
+# my_wallet = []
+# my_heart =['claire','athena','ali','ara']
+# def is_empty(check):
+#   if len(check) == 0:
+#     return 'the list is empty'
+#   else:
+#     return 'the list has something in it'
+# print(is_empty(my_wallet))
+
+numbers = [12, 45, 67, 89, 23, 56, 78, 90, 34, 21, 65, 87, 43, 32, 10]
+def mean (numbers):
+  sum = 0
+  for i in numbers:
+    sum+=i
+  mean = sum / len(numbers)
+  return f'The mean of the number list is: {mean}'
+
+def median(numbers):
+    sorted_number = sorted(numbers)
+    n = len(sorted_number)
+    if n % 2 == 0: 
+        mid1 = sorted_number[n//2 - 1]
+        mid2 = sorted_number[n//2]
+        median = (mid1 + mid2) / 2
+    else:  
+        median = sorted_number[n//2]
+    return f'The median for the number list is: {median}'
+
+
+def mode(numbers):
+   counts={}
+   for i in numbers:
+     if i in counts:
+      counts[i] = counts[i]+1
+     else:
+      counts[i] = 1
+   return max(counts, key=counts.get)
+
+
+def variance(numbers):
+  add = 0
+  for i in numbers:
+    add+=i
+  mean = add / len(numbers)
+  variance = sum((add-mean)**2 for x in numbers) /len(numbers)
+  return f'The variance of the number list is: {variance:.2f}'
+
+import math
+def std(numbers):
+  add = 0
+  for i in numbers:
+    add+=i
+  mean = add / len(numbers)
+  variance = sum((x-mean)**2 for x in numbers) /len(numbers)
+  std = math.sqrt(variance)
+  return f'The standard deviation of number list is: {std:.2f}'
+
+print(mean(numbers))
+print(median(numbers))
+print(mode(numbers))
+print(variance(numbers))
+print(std(numbers))
+
 #level 3
 # def prime(number):
 #     is_prime = True   

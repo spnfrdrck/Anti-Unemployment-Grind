@@ -40,6 +40,68 @@ median()
 average_age()
 range_of_num()
 compare()
-          
+empty_list = []
+if not empty_list:
+  print('empty')
+
+crush = ["athena","ali","yanna","claire","ysabel"]
+print(len(crush))
+print(crush [0])
+print(crush [2])
+print(crush [4])
+
+mixed_data_types = ['Fred','20','172cm','waiting for my LOML','Annex 2 Lot 4 Brittany 1']
+it_companies = ['Facebook','google','microsoft','apple','IBM','oracle','Amazon']
+print(mixed_data_types,it_companies)
+no_company= (len(it_companies))
+print(no_company)
+it_first = it_companies[0]
+it_mid= it_companies[3]
+it_last = it_companies[6]
+
+print(it_first,it_mid,it_last)
+
+it_companies[0] = 'Adobe'
+it_companies[1] = 'Cisco'
+it_companies[3] = 'Tencent'
+
+print (it_companies)
+
+it_companies.append('Alibaba')
+it_companies.insert(2,'NVIDIA')
+print(it_companies)
+
+it_companies[8] = 'ALIBABA'
+print(it_companies)
+
+all_list = it_companies + mixed_data_types
+print(all_list)
+
+all_list.extend(mixed_data_types)
+all_list.extend(it_companies)
+print(all_list)
+
+for IBM in all_list:
+  print('there is IBM')
+  print(all_list.count('IBM'))
+
+all_list.sort()
+print(all_list)
+
+all_list.sort(reverse=True)
+print(all_list)
+
+all_list_spliced_1st_half = all_list[0:3]
+print (all_list_spliced_1st_half)
+
+all_list_spliced_last_half = all_list [-3:]
+print(all_list_spliced_last_half)
+
+all_list.remove('172cm')
+all_list.remove('oracle')
+print(all_list)
+
+all_list.clear
+print (all_list)         
 
 
